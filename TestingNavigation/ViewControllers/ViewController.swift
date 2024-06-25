@@ -13,6 +13,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier{
+        case "pushNext"? :
+            guard let nextVC = segue.destination as? SegueNextViewController
+            else {return}
+            nextVC.labelText = "Pushed From Segue"
+            
+        case "modalNext"?:
+            guard let nextVC = segue.destination as? SegueNextViewController
+            else {return}
+            nextVC.labelText = "Modal from segue"
+        default:
+            return
+        }
+    }
+    
     @IBAction private func pushNextViewController(){
         let nextVC = CodeNextViewController(labelText: "Pushed From Code")
         self.navigationController?.pushViewController(nextVC, animated: true)

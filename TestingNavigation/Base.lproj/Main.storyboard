@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nIO-TN-nwb">
-                                <rect key="frame" x="118.33333333333333" y="345.33333333333331" width="156.33333333333337" height="161.33333333333331"/>
+                                <rect key="frame" x="112.33333333333333" y="345.33333333333331" width="168.33333333333337" height="161.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUq-M7-OtK">
-                                        <rect key="frame" x="0.0" y="0.0" width="156.33333333333334" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="168.33333333333334" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Code Push"/>
                                         <connections>
@@ -28,7 +28,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqt-ul-mLr">
-                                        <rect key="frame" x="0.0" y="42.333333333333371" width="156.33333333333334" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="42.333333333333371" width="168.33333333333334" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Code Modal"/>
                                         <connections>
@@ -36,14 +36,20 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVE-av-DEY">
-                                        <rect key="frame" x="0.0" y="84.666666666666686" width="156.33333333333334" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="84.666666666666686" width="168.33333333333334" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Navigation Push"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="seguePushButton"/>
+                                        <connections>
+                                            <segue destination="zPQ-Ld-FDD" kind="show" identifier="pushNext" id="tSt-0I-0Kd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQd-ua-egh">
-                                        <rect key="frame" x="0.0" y="126.99999999999999" width="156.33333333333334" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="126.99999999999999" width="168.33333333333334" height="34.333333333333329"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Navigation Modal"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="segueModalButton"/>
+                                        <connections>
+                                            <segue destination="zPQ-Ld-FDD" kind="presentation" identifier="modalNext" id="xIV-fz-Wqu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -60,6 +66,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1023.6641221374045" y="-27.464788732394368"/>
+        </scene>
+        <!--Segue Next View Controller-->
+        <scene sceneID="NJf-0T-zUZ">
+            <objects>
+                <viewController storyboardIdentifier="SegueNextViewController" id="zPQ-Ld-FDD" customClass="SegueNextViewController" customModule="TestingNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BRC-Tf-hb8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiU-UG-gcF">
+                                <rect key="frame" x="175.66666666666666" y="410.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nvn-mV-NDY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fiU-UG-gcF" firstAttribute="centerX" secondItem="BRC-Tf-hb8" secondAttribute="centerX" id="I7t-Jv-U9D"/>
+                            <constraint firstItem="fiU-UG-gcF" firstAttribute="centerY" secondItem="BRC-Tf-hb8" secondAttribute="centerY" id="Xsz-hY-GbJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eMk-gJ-q9j"/>
+                    <connections>
+                        <outlet property="label" destination="fiU-UG-gcF" id="EWR-SK-xhv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBs-ya-2kM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R5e-kB-GRo">
@@ -80,6 +117,9 @@
             <point key="canvasLocation" x="96.946564885496173" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xIV-fz-Wqu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

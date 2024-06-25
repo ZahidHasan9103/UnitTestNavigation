@@ -14,6 +14,7 @@
 		C0549F952C27C7DC001EFF10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0549F942C27C7DC001EFF10 /* Assets.xcassets */; };
 		C0549F982C27C7DC001EFF10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0549F962C27C7DC001EFF10 /* LaunchScreen.storyboard */; };
 		C07E954F2C2ACFC6005C7271 /* CodeNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E954E2C2ACFC6005C7271 /* CodeNextViewController.swift */; };
+		C07E95522C2AD57E005C7271 /* SegueNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E95512C2AD57E005C7271 /* SegueNextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		C0549F992C27C7DC001EFF10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0549FA32C27C80D001EFF10 /* TestingNavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingNavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07E954E2C2ACFC6005C7271 /* CodeNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeNextViewController.swift; sourceTree = "<group>"; };
+		C07E95512C2AD57E005C7271 /* SegueNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueNextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				C07E954E2C2ACFC6005C7271 /* CodeNextViewController.swift */,
 				C0549F8F2C27C7DA001EFF10 /* ViewController.swift */,
+				C07E95512C2AD57E005C7271 /* SegueNextViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C07E954F2C2ACFC6005C7271 /* CodeNextViewController.swift in Sources */,
+				C07E95522C2AD57E005C7271 /* SegueNextViewController.swift in Sources */,
 				C0549F902C27C7DA001EFF10 /* ViewController.swift in Sources */,
 				C0549F8C2C27C7DA001EFF10 /* AppDelegate.swift in Sources */,
 				C0549F8E2C27C7DA001EFF10 /* SceneDelegate.swift in Sources */,
