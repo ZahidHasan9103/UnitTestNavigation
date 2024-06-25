@@ -20,17 +20,23 @@
                                 <rect key="frame" x="118.33333333333333" y="345.33333333333331" width="156.33333333333337" height="161.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUq-M7-OtK">
-                                        <rect key="frame" x="0.0" y="0.0" width="156.33333333333337" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="156.33333333333334" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Code Push"/>
+                                        <connections>
+                                            <action selector="pushNextViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="ypw-fV-S3e"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqt-ul-mLr">
-                                        <rect key="frame" x="0.0" y="42.333333333333371" width="156.33333333333331" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="42.333333333333371" width="156.33333333333334" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Code Modal"/>
+                                        <connections>
+                                            <action selector="presentModalNextViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ld-Rr-4wh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVE-av-DEY">
-                                        <rect key="frame" x="0.0" y="84.666666666666686" width="156.33333333333337" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="84.666666666666686" width="156.33333333333334" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Navigation Push"/>
                                     </button>
