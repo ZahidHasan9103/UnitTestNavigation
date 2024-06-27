@@ -24,6 +24,7 @@ final class ViewControllerTests: XCTestCase {
     }
     
     override func tearDown() {
+        executeRunLoop()
         sut = nil
         super.tearDown()
     }
@@ -45,7 +46,7 @@ final class ViewControllerTests: XCTestCase {
         XCTAssertEqual(codeNextVC.label.text, "Pushed From Code")
     }
     
-    //MARK: - Code based modally present
+    //MARK: - Code based modal presentation
     
     /// This is a **Not Recommended** way to test a **modally presentedViewController,**
     /// because the deInit() methods from viewController and CodeNextViewController won't get called,
@@ -89,5 +90,16 @@ final class ViewControllerTests: XCTestCase {
     
     //MARK: - Segue-Based Push Navigation
     
+    @MainActor func test_tappingSeguePushButton_shouldShowSegueNextViewController(){
+        let presentationVerifier = PresentationVerifier()
+        putInWindow(sut)
+        
+        tap(sut.seguePushButton)
+        
+        let segueNextVC: SegueNextViewController? = presentationVerifier.verify(
+            animated: true,
+            presentingViewController: sut)
+        XCTAssertEqual(segueNextVC?.labelText, "Pushed From Segue")
+    }
     
 }
