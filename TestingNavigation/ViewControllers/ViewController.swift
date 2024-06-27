@@ -9,6 +9,10 @@ class ViewController: UIViewController {
     @IBOutlet private(set) var seguePushButton: UIButton!
     @IBOutlet private(set) var segueModalButton: UIButton!
 
+    deinit{
+        print(">>>> ViewController.deinit")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
