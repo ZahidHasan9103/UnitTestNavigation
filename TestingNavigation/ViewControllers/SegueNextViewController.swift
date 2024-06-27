@@ -13,6 +13,9 @@ class SegueNextViewController: UIViewController {
     
     @IBOutlet private(set) var label: UILabel!
 
+    deinit{
+        print(">>>> SegueNextViewController.deinit")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = labelText

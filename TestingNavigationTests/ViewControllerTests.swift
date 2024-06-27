@@ -11,10 +11,25 @@ import ViewControllerPresentationSpy
 
 final class ViewControllerTests: XCTestCase {
     
-    func test_tappingCodePushButton_shouldPushCodeNextViewController(){
+    private var sut: ViewController!
+    
+    override func setUp() {
+        super.setUp()
+
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut: ViewController = storyboard.instantiateViewController(identifier: String(describing: ViewController.self))
+        sut = storyboard.instantiateViewController(
+            identifier: String(describing: ViewController.self))
         sut.loadViewIfNeeded()
+
+    }
+    
+    override func tearDown() {
+        sut = nil
+        super.tearDown()
+    }
+    
+    //MARK: - Code based push navigation
+    func test_tappingCodePushButton_shouldPushCodeNextViewController(){
         let navigationController = UINavigationController(rootViewController: sut)
         
         tap(sut.codePushButton)
@@ -30,6 +45,7 @@ final class ViewControllerTests: XCTestCase {
         XCTAssertEqual(codeNextVC.label.text, "Pushed From Code")
     }
     
+    //MARK: - Code based modally present
     
     /// This is a **Not Recommended** way to test a **modally presentedViewController,**
     /// because the deInit() methods from viewController and CodeNextViewController won't get called,
@@ -60,9 +76,6 @@ final class ViewControllerTests: XCTestCase {
     
     @MainActor func test_tappingCodeModalButton_shouldPresentCodeNextViewController(){
         let presentationVerifier = PresentationVerifier()
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut: ViewController = storyboard.instantiateViewController(identifier: String(describing: ViewController.self))
-        sut.loadViewIfNeeded()
         
         tap(sut.codeModalButton)
         
@@ -73,5 +86,8 @@ final class ViewControllerTests: XCTestCase {
         XCTAssertEqual(codeNextVC?.label.text, "Modal from code")
 
     }
-
+    
+    //MARK: - Segue-Based Push Navigation
+    
+    
 }
