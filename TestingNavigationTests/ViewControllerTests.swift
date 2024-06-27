@@ -89,7 +89,6 @@ final class ViewControllerTests: XCTestCase {
     }
     
     //MARK: - Segue-Based Push Navigation
-    
     @MainActor func test_tappingSeguePushButton_shouldShowSegueNextViewController(){
         let presentationVerifier = PresentationVerifier()
         putInWindow(sut)
@@ -100,6 +99,18 @@ final class ViewControllerTests: XCTestCase {
             animated: true,
             presentingViewController: sut)
         XCTAssertEqual(segueNextVC?.labelText, "Pushed From Segue")
+    }
+    //MARK: - Segue-Based Modal Navigation
+    
+    @MainActor func test_tappingSegueModalButton_shouldShowSegueNextViewController(){
+        let presentationVerifier = PresentationVerifier()
+        
+        tap(sut.segueModalButton)
+        
+        let segueNextVC: SegueNextViewController? = presentationVerifier.verify(
+            animated: true,
+            presentingViewController: sut)
+        XCTAssertEqual(segueNextVC?.labelText, "Modal from segue")
     }
     
 }
