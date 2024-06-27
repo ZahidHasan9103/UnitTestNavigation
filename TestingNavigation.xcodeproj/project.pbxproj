@@ -15,6 +15,8 @@
 		C0549F982C27C7DC001EFF10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0549F962C27C7DC001EFF10 /* LaunchScreen.storyboard */; };
 		C07E954F2C2ACFC6005C7271 /* CodeNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E954E2C2ACFC6005C7271 /* CodeNextViewController.swift */; };
 		C07E95522C2AD57E005C7271 /* SegueNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E95512C2AD57E005C7271 /* SegueNextViewController.swift */; };
+		C07E95562C2D2902005C7271 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E95552C2D2902005C7271 /* ViewControllerTests.swift */; };
+		C07E95582C2D296C005C7271 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E95572C2D296C005C7271 /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		C0549FA32C27C80D001EFF10 /* TestingNavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingNavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07E954E2C2ACFC6005C7271 /* CodeNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeNextViewController.swift; sourceTree = "<group>"; };
 		C07E95512C2AD57E005C7271 /* SegueNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueNextViewController.swift; sourceTree = "<group>"; };
+		C07E95552C2D2902005C7271 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		C07E95572C2D296C005C7271 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		C0549FA42C27C80D001EFF10 /* TestingNavigationTests */ = {
 			isa = PBXGroup;
 			children = (
+				C07E95552C2D2902005C7271 /* ViewControllerTests.swift */,
+				C07E95572C2D296C005C7271 /* TestHelpers.swift */,
 			);
 			path = TestingNavigationTests;
 			sourceTree = "<group>";
@@ -161,6 +167,7 @@
 					};
 					C0549FA22C27C80D001EFF10 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = C0549F872C27C7DA001EFF10;
 					};
 				};
@@ -221,6 +228,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07E95562C2D2902005C7271 /* ViewControllerTests.swift in Sources */,
+				C07E95582C2D296C005C7271 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9T6VTX7NFQ;
@@ -441,6 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeusEX.com.TestingNavigationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestingNavigation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestingNavigation";
@@ -451,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9T6VTX7NFQ;
